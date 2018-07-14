@@ -55,7 +55,6 @@ $gutter-horizontal: 5rem;
 }
 
 html {
-    //1rem =;
     font-size: 62.5%;
 }
 
@@ -67,6 +66,10 @@ body {
     font-weight: 400;
     letter-spacing: 0.3rem;
     line-height: 1.7;
+
+    p {
+        letter-spacing: 0;
+    }
 }
 
 ::selection {

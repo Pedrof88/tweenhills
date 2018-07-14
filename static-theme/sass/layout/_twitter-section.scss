@@ -6,7 +6,7 @@
             position:relative;
             margin-left: 14%;
             display: block;
-            max-width: 1072px;
+            max-width: 1260px;
             width: 100%;
             z-index: 10;
         }
@@ -28,8 +28,8 @@
         margin: auto;
         z-index: 20;
         position: absolute;
-        top: 8%;
-        left: 64%;
+        top: 7%;
+        left: 68%;
         transform: translate(-50%, -50%);
         width: 905px;
     }
@@ -65,6 +65,9 @@
         
         p{
             margin-top: 20px;
+            a {
+                float: none !important;
+            }
         }
     }
 
@@ -90,8 +93,7 @@
 
     &__block {
         display: inline-block;
-        max-width: 500px;
-        width: 100%;
+        width: 31%;
         height: auto;
         border-left: 3px solid $color-secondary;
         padding: 0 30px;
