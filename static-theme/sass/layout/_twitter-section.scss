@@ -90,9 +90,9 @@
 .twitter-feed {
     padding-top: 60px;
     margin-left: 14%;
+    display: flex;
 
     &__block {
-        display: inline-block;
         width: 31%;
         height: auto;
         border-left: 3px solid $color-secondary;

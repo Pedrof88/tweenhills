@@ -38,6 +38,7 @@ $color-primary: #522c06;
 $color-secondary: #c7a77c;
 $color-tertiary: #6fcff5;
 $color-white: #FFF;
+$color-grey: #f1f1f1;
 
 //GRID
 $grid-width: 100%;
@@ -59,6 +60,7 @@ html {
 }
 
 body {
+    overflow-x: hidden;
     box-sizing: border-box;
     padding: 3rem 0 3rem 3rem;
     font-family: $font-regular;

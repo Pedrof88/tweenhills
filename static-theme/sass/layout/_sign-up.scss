@@ -1,0 +1,56 @@
+.sign-up {
+    position: relative;
+    &__box {
+        padding: 30px;
+        background-color: $color-primary;
+        width: 40%;
+        float: right;
+        margin-right: 5%;
+        position: relative;
+        z-index: 100;
+    }
+    &__text {
+        display: inline-block;
+        p {
+            color: $color-white;
+            margin-left: 10%;
+            width: 100%;
+            margin-top: 5px;
+            font-size: 1.8rem;
+        }
+        span {
+            text-decoration: underline;
+        }
+    }
+    .btn {
+        &,
+        &:link,
+        &:visited {
+            background-color: $color-tertiary;
+            color: $color-white;
+            padding: 15px 100px;
+            float: right;
+            border: none;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        &:active,
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            background-color: $color-secondary;
+        }
+    }
+    &__square {
+        position: absolute;
+        height: 179px;
+        width: 250px;
+        z-index: 0;
+    }
+    .light {
+        border: 4px solid $color-secondary;
+        bottom: -5%;
+        right: 3%;
+    }
+}

@@ -1,97 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        
-        <title>Tweenhills</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <header class="header">
-            <div class="header__logo-box">
-                <object type="image/svg+xml" data="img/tweenhills.svg" class="header__logo">
-                    Tweenhills logo
-                </object>
-             </div>
-        </header>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
-        <div class="navigation">
-            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-            <label for="navi-toggle" class="navigation__button"><span class="navigation__icon"></span></label>
-            <nav class="navigation__nav">
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link">Stallions</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">News & media</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">About us</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Gallery & videos</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Contact us</a></li>
-                </ul>
-            </nav>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <title>Tweenhills</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__logo-box">
+            <object type="image/svg+xml" data="img/tweenhills.svg" class="header__logo">
+                Tweenhills logo
+            </object>
         </div>
-        <div class="row banner">
-                <div class="banner__welcome">
-                    <span class="text-bold">Tweenhills</span > <span class="text-light">| welcome</span>
+    </header>
+
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon"></span>
+        </label>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Stallions</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">News & media</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">About us</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Gallery & videos</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Contact us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <section class="banner">
+        <div class="row">
+            <div class="banner__welcome">
+                <span class="text-bold">Tweenhills</span>
+                <span class="text-light">| welcome</span>
+            </div>
+            <div class="banner__image col-85 right">
+                <img src="img/horse-top-banner.png" alt="horse" />
+                <div class="banner__call-to-action">
+                    <h2>Charm
+                        <br />spirit</h2>
+                    <a href="#" class="banner__call-to-action-link">
+                        <span class="text-light">Find out</span>
+                        <span class="text-bold">more</span>
+                    </a>
                 </div>
-                <div class="banner__image col-85 right">
-                    <img src="img/horse-top-banner.png" alt="horse" />
-                    <div class="banner__call-to-action">
-                        <h2>Charm<br />spirit</h2>
-                        <a href="#" class="banner__call-to-action-link">
-                            <span class="text-light">Find out</span> <span class="text-bold">more</span>
-                        </a>
-                    </div>
+            </div>
+            <div class="banner__intro-text">
+                <h1 class="heading-primary">Welcome
+                    <br /> to Tweenhills</h1>
+                <div class="banner__text-box">
+                    <p>Although Tweenhills is primary about stallions, we do much more and that is our strength...</p>
                 </div>
-                <div class="banner__intro-text">
-                    <h1 class="heading-primary">Welcome<br /> to Tweenhills</h1>
-                    <div class="banner__text-box">
-                        <p>Although Tweenhills is primary about stallions, we do much more and that is our strength...</p>
-                    </div>
-                </div>
-                <div class="banner__square"></div>
+            </div>
+            <div class="banner__square"></div>
         </div>
-        <div class="row sponsors">
+    </section>
+    <section class="sponsors">
+        <div class="row">
             <div class="sponsors__logos right">
-                <img src="img/pearl-bloodstock.png" alt="pearl bloodstock" class="sponsors__img"/>
-                <img src="img/qatar-racing.png" alt="qatar racing" class="sponsors__img"/>
-                <img src="img/royal-ascot-QIPCO.png" alt="Royal Ascot / QIPCO"/>
+                <img src="img/pearl-bloodstock.png" alt="pearl bloodstock" class="sponsors__img" />
+                <img src="img/qatar-racing.png" alt="qatar racing" class="sponsors__img" />
+                <img src="img/royal-ascot-QIPCO.png" alt="Royal Ascot / QIPCO" />
             </div>
         </div>
-
-        <div class="row intro-content">
-            <p class="intro-content__paragraph col-50">Situated on 750 acres in the Gloucestershire vale, Tweenhills has long been regarded as one of the 
-            finest stock farms. Nestling between the Malvern Hills and the River Severn, stock thrives on the 
-            permanent pasture. The paddocks are sheltered by ancient hedgerows and magnificent oaks, and are 
-            farmed in strict rotation with our resident red Aberdeen Angus suckler herd. During the winter 
-            months the farm is grazed extensively by sheep. </p>
+    </section>
+    <section class="intro-content">
+        <div class="row">
+            <p class="intro-content__paragraph col-50">Situated on 750 acres in the Gloucestershire vale, Tweenhills has long been regarded as one of the finest stock
+                farms. Nestling between the Malvern Hills and the River Severn, stock thrives on the permanent pasture. The
+                paddocks are sheltered by ancient hedgerows and magnificent oaks, and are farmed in strict rotation with
+                our resident red Aberdeen Angus suckler herd. During the winter months the farm is grazed extensively by
+                sheep. </p>
         </div>
+    </section>
 
-        <div class="row twitter">
+    <section class="twitter">
+        <div class="row">
 
             <h1 class="twitter__title heading-primary">750 acres in the Gloucestershire vale</h1>
 
             <div class="twitter__latest-news">
-                <span class="text-bold">Tweenhills</span > <span class="text-light">| latest news</span>
+                <span class="text-bold">Tweenhills</span>
+                <span class="text-light">| latest news</span>
             </div>
 
             <div class="twitter__box">
-                    <span class="name">David Redvers</span> <a href="#" class="follow-us">Follow us</a>
-                    <p>HAVANA VIEW wins in Milan. It's 
-                    now 2 wins from 2 runs for this son of 
-                    Havana Gold. Congratulations to 
-                    connections. Bred <a href="#">@NatStudStallion</a></p>
+                <span class="name">David Redvers</span>
+                <a href="#" class="follow-us">Follow us</a>
+                <p>HAVANA VIEW wins in Milan. It's now 2 wins from 2 runs for this son of Havana Gold. Congratulations to connections.
+                    Bred
+                    <a href="#">@NatStudStallion</a>
+                </p>
             </div>
 
             <div class="twitter__image">
-                <img src="img/horse-twitter-feed.png" alt="horse"/>
+                <img src="img/horse-twitter-feed.png" alt="horse" />
             </div>
 
         </div>
+
+    </section>
+
+    <section class="twitter-feed">
 
         <div class="row twitter-feed">
             <div class="twitter-feed__block">
@@ -131,11 +161,17 @@
             </div>
         </div>
 
+    </section>
+
+
+    <section class="stallions">
         <div class="row stallions">
-            <h1 class="heading-primary">Our<br/> Stallions</h1>
+            <h1 class="heading-primary">Our
+                <br/> Stallions</h1>
 
             <div class="stallions__side-text">
-                <span class="text-bold">Tweenhills</span > <span class="text-light">| Stallions</span>
+                <span class="text-bold">Tweenhills</span>
+                <span class="text-light">| Stallions</span>
             </div>
 
             <div class="row stallions__box">
@@ -156,5 +192,89 @@
                 </div>
             </div>
         </div>
-    </body>
+    </section>
+
+
+    <section class="stallions-update">
+        <div class="row">
+            <div class="stallions-update__banner">
+                <img src="img/stallions-banner.png" alt="Stallions">
+            </div>
+            <div class="stallions-update__title">
+                <h1 class="heading-primary">Stallion update</h1>
+            </div>
+
+            <div class="stallions-update__side-text">
+                <span class="text-bold">Tweenhills</span>
+                <span class="text-light">| Stallion update</span>
+            </div>
+
+            <div class="stallions-update__box">
+                <p>Zoustar's daughter Sunlight won her third Stakes race when making all in the Gr. 3 Canadian Club Magic Night
+                    Stakes on Saturday. Having already won the Listed Magic Millions 2YO Classic on the Gold Coast and the
+                    Gr. 2 Silver Slipper Stakes at Rosehill Gardens, Sunlight returned to the latter track to take the Magic
+                    Night.
+                </p>
+            </div>
+            <div class="stallions-update__square dark"></div>
+        </div>
+    </section>
+
+    <section class="sign-up">
+        <div class="row">
+            <div class="sign-up__box">
+                <div class="sign-up__text">
+                    <p>Sign up to receive our latest news
+                        <span>enter email address</span>
+                    </p>
+                </div>
+                <button class="btn">
+                    sign up!
+                </button>
+            </div>
+            <div class="sign-up__square light"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__left">
+            <div class="footer__logo">
+                <object type="image/svg+xml" data="img/tweenhills.svg" class="header__logo">
+                    Tweenhills logo
+                </object>
+            </div>
+            <nav class="footer__navigation">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Stallions</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">News & media</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">About us</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Gallery & videos</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Contact us</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="footer__copyright">
+                <p>
+                    © Copyright 2018 Tweenhills.
+                </p>
+            </div>
+        </div>
+        <div class="footer__right">
+            <img src="img/pearl-bloodstock-footer.png" alt="pearl bloodstock">
+            <img src="img/qatar-racing-footer.png" alt="qatar racing">
+            <img src="img/tweenhills-angus.png" alt="tweenhills angus">
+        </div>
+    </footer>
+</body>
+
 </html>
