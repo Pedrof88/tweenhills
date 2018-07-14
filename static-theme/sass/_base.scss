@@ -1,0 +1,100 @@
+//FONTS
+@font-face {
+    font-family: 'Brandon';
+    src: url('../fonts/Brandon_reg.otf');
+}
+
+@font-face {
+    font-family: 'Brandon bold';
+    src: url('../fonts/Brandon_bld.otf');
+}
+
+@font-face {
+    font-family: 'Brandon light';
+    src: url('../fonts/Brandon_light.otf');
+}
+
+@font-face {
+    font-family: 'Brandon medium';
+    src: url('../fonts/Brandon_med.otf');
+}
+
+@font-face {
+    font-family: 'Brandon black';
+    src: url('../fonts/Brandon_med.otf');
+}
+
+$font-regular: 'Brandon';
+$font-bold: 'Brandon bold';
+$font-light: 'Brandon light';
+$font-medium: 'Brandon medium';
+$font-black: 'Brandon black';
+
+//FONT SIZE
+$default-font-size: 1.6rem;
+
+//COLOURS
+$color-primary: #522c06;
+$color-secondary: #c7a77c;
+$color-tertiary: #6fcff5;
+$color-white: #FFF;
+
+//GRID
+$grid-width: 100%;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 5rem;
+
+//RESET
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    //1rem =;
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem 0 3rem 3rem;
+    font-family: $font-regular;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    line-height: 1.7;
+}
+
+::selection {
+    background: $color-secondary;
+    color: $color-white;
+}
+
+//UTILITIES
+.header {
+    display: inline-block;
+}
+
+.text-bold {
+    font-family: $font-bold;
+    text-transform: uppercase;
+}
+
+.text-light {
+    font-family: $font-light;
+    text-transform: uppercase;
+}
+
+.heading-primary {
+    font-size: 5rem;
+    font-family: $font-light;
+    color: $color-tertiary;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: .8rem;
+}
+

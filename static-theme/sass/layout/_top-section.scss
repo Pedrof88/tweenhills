@@ -1,0 +1,105 @@
+.banner {
+    position: relative;
+    padding-top: $gutter-horizontal;
+    &__welcome {
+            color: $color-primary;
+            margin-top: 29%;
+            transform: rotate(-90deg);
+            transform-origin: left top 0;
+            position: absolute;
+    }
+    &__image {
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        z-index: 200;
+    }
+
+    &__call-to-action {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-25%, -50%);
+        text-align: right;
+
+        h2 {
+            display: block;
+            color: $color-white;
+            font-family: $font-light;
+            font-size: 5rem;
+            text-transform: uppercase;
+            letter-spacing: 1rem;
+            line-height: 1.3;
+            text-align: right;
+        }
+    }
+    &__call-to-action-link {
+        transition: all .3s;
+        backface-visibility: hidden;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $color-white;
+            margin-right: 2rem;
+        }
+
+        &:hover,
+        &:active {
+            padding: .5rem;
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+
+    &__intro-text {
+        position: absolute;
+        left: 19%;
+        bottom: 50px;
+        max-width: 500px;
+        width: 100%;
+        z-index: 300;
+    }
+
+    &__text-box {
+        background: $color-primary;
+        color: $color-white;
+        padding: 30px;
+        margin-top: 15px;
+        position: relative;
+        left: -200px;
+    }
+
+    &__square {
+        width: 420px;
+        height: 420px;
+        border: 4px solid $color-secondary;
+        position: absolute;
+        bottom: -30px;
+        left: 12%;
+        z-index: 10;
+    }
+    
+}
+
+.sponsors {
+    &__logos {
+        margin-top: -8px;
+    }
+    &__img {
+        margin: 10px;
+    }
+}
+
+.intro-content {
+    padding-top: 15px;
+    padding-bottom: 130px;
+    &__paragraph {
+        margin-left: 13%;
+        color: $color-primary;
+    }
+}
+

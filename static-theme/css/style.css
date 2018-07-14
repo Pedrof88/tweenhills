@@ -1,0 +1,304 @@
+@font-face {
+  font-family: 'Brandon';
+  src: url("../fonts/Brandon_reg.otf"); }
+
+@font-face {
+  font-family: 'Brandon bold';
+  src: url("../fonts/Brandon_bld.otf"); }
+
+@font-face {
+  font-family: 'Brandon light';
+  src: url("../fonts/Brandon_light.otf"); }
+
+@font-face {
+  font-family: 'Brandon medium';
+  src: url("../fonts/Brandon_med.otf"); }
+
+@font-face {
+  font-family: 'Brandon black';
+  src: url("../fonts/Brandon_med.otf"); }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem 0 3rem 3rem;
+  font-family: "Brandon";
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  line-height: 1.7; }
+
+::selection {
+  background: #c7a77c;
+  color: #FFF; }
+
+.header {
+  display: inline-block; }
+
+.text-bold {
+  font-family: "Brandon bold";
+  text-transform: uppercase; }
+
+.text-light {
+  font-family: "Brandon light";
+  text-transform: uppercase; }
+
+.heading-primary {
+  font-size: 5rem;
+  font-family: "Brandon light";
+  color: #6fcff5;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: .8rem; }
+
+.row {
+  max-width: 100%;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 5rem; }
+  .row .col-85 {
+    width: 85%; }
+  .row .col-50 {
+    width: 50%; }
+  .row .right {
+    float: right !important; }
+
+.navigation {
+  float: right;
+  min-width: 1000px; }
+  .navigation__checkbox {
+    float: right; }
+  .navigation__item {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-family: "Brandon bold";
+    margin: 0 15px; }
+  .navigation__link {
+    text-transform: uppercase; }
+    .navigation__link:link, .navigation__link:visited {
+      color: #522c06;
+      text-decoration: none;
+      font-size: 1.7rem; }
+  .navigation__link::after {
+    content: "";
+    transition: all 0.2s ease 0s;
+    left: 0;
+    top: 0;
+    width: 0px; }
+  .navigation__link:hover::after {
+    content: "";
+    display: block;
+    float: right;
+    opacity: 1;
+    width: 50%;
+    padding-top: 2px;
+    border-bottom: 2px solid #6fcff5; }
+  .navigation__button {
+    width: 50px;
+    height: 50px;
+    background-color: #c7a77c;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 2rem; }
+  .navigation__checkbox {
+    display: none; }
+  .navigation__icon {
+    position: relative;
+    margin-top: 2.5rem; }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      width: 2rem;
+      height: 2px;
+      background-color: #FFF;
+      display: inline-block; }
+    .navigation__icon::before, .navigation__icon::after {
+      content: "";
+      position: absolute;
+      left: 2px;
+      width: 1.5rem;
+      float: none;
+      transition: all .2s; }
+    .navigation__icon::before {
+      top: -.8rem; }
+    .navigation__icon::after {
+      top: .8rem; }
+
+.banner {
+  position: relative;
+  padding-top: 5rem; }
+  .banner__welcome {
+    color: #522c06;
+    margin-top: 29%;
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+    position: absolute; }
+  .banner__image {
+    position: relative;
+    z-index: 200; }
+    .banner__image img {
+      width: 100%;
+      height: auto; }
+  .banner__call-to-action {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-25%, -50%);
+    text-align: right; }
+    .banner__call-to-action h2 {
+      display: block;
+      color: #FFF;
+      font-family: "Brandon light";
+      font-size: 5rem;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      line-height: 1.3;
+      text-align: right; }
+  .banner__call-to-action-link {
+    transition: all .3s;
+    backface-visibility: hidden;
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+    .banner__call-to-action-link:link, .banner__call-to-action-link:visited {
+      text-decoration: none;
+      color: #FFF;
+      margin-right: 2rem; }
+    .banner__call-to-action-link:hover, .banner__call-to-action-link:active {
+      padding: .5rem;
+      background-color: #522c06;
+      color: #FFF; }
+  .banner__intro-text {
+    position: absolute;
+    left: 19%;
+    bottom: 50px;
+    max-width: 500px;
+    width: 100%;
+    z-index: 300; }
+  .banner__text-box {
+    background: #522c06;
+    color: #FFF;
+    padding: 30px;
+    margin-top: 15px;
+    position: relative;
+    left: -200px; }
+  .banner__square {
+    width: 420px;
+    height: 420px;
+    border: 4px solid #c7a77c;
+    position: absolute;
+    bottom: -30px;
+    left: 12%;
+    z-index: 10; }
+
+.sponsors__logos {
+  margin-top: -8px; }
+
+.sponsors__img {
+  margin: 10px; }
+
+.intro-content {
+  padding-top: 15px;
+  padding-bottom: 130px; }
+  .intro-content__paragraph {
+    margin-left: 13%;
+    color: #522c06; }
+
+.twitter {
+  padding-top: 60px;
+  position: relative; }
+  .twitter__image img {
+    position: relative;
+    margin-left: 14%;
+    display: block;
+    max-width: 1072px;
+    width: 100%;
+    z-index: 10; }
+  .twitter__latest-news {
+    color: #522c06;
+    margin-top: 29%;
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+    position: absolute;
+    left: 3%;
+    z-index: 1;
+    border: 5px solid #522c06;
+    padding: 10px 100px 185px 100px; }
+  .twitter__title {
+    margin: auto;
+    z-index: 20;
+    position: absolute;
+    top: 8%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+    width: 905px; }
+  .twitter__box {
+    position: absolute;
+    background-color: #c7a77c;
+    width: 400px;
+    height: auto;
+    z-index: 100;
+    top: -50px;
+    left: 10%;
+    color: #FFF;
+    padding: 45px 30px; }
+    .twitter__box .follow-us:link, .twitter__box .follow-us:visited {
+      text-decoration: none;
+      color: #FFF;
+      float: right; }
+    .twitter__box a:link, .twitter__box a:visited {
+      text-decoration: none;
+      color: #522c06;
+      float: right; }
+    .twitter__box p {
+      margin-top: 20px; }
+  .twitter__logo-box {
+    position: absolute;
+    background-color: #6fcff5;
+    height: 360px;
+    width: 80px;
+    bottom: 5%;
+    right: 459px; }
+    .twitter__logo-box img {
+      position: absolute;
+      bottom: 10px;
+      left: 10px; }
+
+.twitter-feed {
+  padding-top: 60px;
+  margin-left: 14%; }
+  .twitter-feed__block {
+    display: inline-block;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-left: 3px solid #c7a77c;
+    padding: 0 30px; }
+    .twitter-feed__block:not(:first-child) {
+      padding: 0 30px; }
+  .twitter-feed .date {
+    font-size: 1.4rem;
+    color: #c7a77c;
+    letter-spacing: 0; }
+  .twitter-feed .title {
+    color: #522c06;
+    font-size: 1.8rem;
+    font-family: "Brandon bold";
+    letter-spacing: 0; }
+  .twitter-feed .content {
+    color: #522c06;
+    letter-spacing: 0; }

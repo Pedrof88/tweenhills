@@ -1,0 +1,84 @@
+.navigation {
+    float: right;
+    min-width: 1000px;
+
+    &__checkbox {
+        float: right;
+    }
+
+    &__item {
+        display: inline-block;
+        font-size: $default-font-size;
+        font-family: $font-bold;
+        margin: 0 15px;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        &:link,
+        &:visited {
+            color: $color-primary;
+            text-decoration: none;
+            font-size: 1.7rem;
+         }
+    }
+
+    &__link::after {
+        content: "";
+        transition: all 0.2s ease 0s;
+        left: 0; 
+        top: 0; 
+        width: 0px;  
+    }
+
+    &__link:hover::after {
+            content: "";
+            display: block;
+            float: right;
+            opacity: 1;
+            width: 50%;
+            padding-top: 2px;
+            border-bottom: 2px solid $color-tertiary;
+    }
+
+    &__button {
+        width: 50px;
+        height: 50px;
+        background-color: $color-secondary;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 2rem;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 2.5rem;
+        &,
+        &::before,
+        &::after {
+            width: 2rem;
+            height: 2px;
+            background-color: $color-white;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 2px;
+            width: 1.5rem;
+            float: none;
+            transition: all .2s;
+        }
+        &::before { top: -.8rem };
+        &::after { top: .8rem };
+    }
+
+}
