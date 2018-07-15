@@ -45,6 +45,18 @@
         color: $color-white;
         padding: 45px 30px;
 
+        .twitter-logo {
+            position: absolute;
+            display: inline-block !important;
+            top: 4px;
+            width: 20px !important;
+            height: 18px;
+        }
+
+        .name {
+            margin-left: 30px;
+        }
+
         .follow-us {
             &:link,
             &:visited {
@@ -89,11 +101,11 @@
 
 .twitter-feed {
     padding-top: 60px;
-    margin-left: 14%;
+    margin-left: 20%;
     display: flex;
 
     &__block {
-        width: 31%;
+        width: 100%;
         height: auto;
         border-left: 3px solid $color-secondary;
         padding: 0 30px;

@@ -81,6 +81,49 @@ body {
   .row .right {
     float: right !important; }
 
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1; }
+
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent; }
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #869791; }
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px; }
+
+.owl-dots {
+  margin-top: 30px; }
+  .owl-dots button {
+    outline: none; }
+  .owl-dots .owl-dot span {
+    height: 10px !important;
+    width: 10px !important;
+    margin-top: 30px;
+    background: #c7a77c !important;
+    border: 1px solid #c7a77c;
+    margin: 5px 5px !important; }
+  .owl-dots .owl-dot.active span {
+    background: #FFF !important; }
+
+.carousel-two .owl-dots {
+  text-align: left; }
+  .carousel-two .owl-dots .owl-dot span {
+    background: #FFF !important;
+    border: 1px solid #FFF; }
+  .carousel-two .owl-dots .owl-dot.active span {
+    background: #c7a77c !important; }
+
 .navigation {
   float: right;
   min-width: 1000px; }
@@ -259,6 +302,14 @@ body {
     left: 10%;
     color: #FFF;
     padding: 45px 30px; }
+    .twitter__box .twitter-logo {
+      position: absolute;
+      display: inline-block !important;
+      top: 4px;
+      width: 20px !important;
+      height: 18px; }
+    .twitter__box .name {
+      margin-left: 30px; }
     .twitter__box .follow-us:link, .twitter__box .follow-us:visited {
       text-decoration: none;
       color: #FFF;
@@ -285,10 +336,10 @@ body {
 
 .twitter-feed {
   padding-top: 60px;
-  margin-left: 14%;
+  margin-left: 20%;
   display: flex; }
   .twitter-feed__block {
-    width: 31%;
+    width: 100%;
     height: auto;
     border-left: 3px solid #c7a77c;
     padding: 0 30px; }
@@ -323,7 +374,7 @@ body {
     margin-left: 14%;
     display: flex; }
   .stallions .card {
-    width: 25%;
+    width: 30%;
     text-align: center;
     transition: all .5s; }
     .stallions .card:not(:first-child) {
