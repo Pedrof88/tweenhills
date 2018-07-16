@@ -27,6 +27,9 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 55%; } }
 
 body {
   overflow-x: hidden;
@@ -37,6 +40,9 @@ body {
   font-weight: 400;
   letter-spacing: 0.3rem;
   line-height: 1.7; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 1rem; } }
   body p {
     letter-spacing: 0; }
 
@@ -63,6 +69,14 @@ body {
   line-height: 1.2;
   letter-spacing: .8rem; }
 
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+
 .row {
   max-width: 100%;
   margin: 0 auto; }
@@ -70,14 +84,21 @@ body {
     content: "";
     display: table;
     clear: both; }
-  .row [class^="col-"] {
-    float: left; }
-    .row [class^="col-"]:not(:last-child) {
-      margin-right: 5rem; }
   .row .col-85 {
     width: 85%; }
+    @media only screen and (max-width: 75em) {
+      .row .col-85 {
+        width: 90%; } }
+    @media only screen and (max-width: 56.25em) {
+      .row .col-85 {
+        width: 100%; } }
   .row .col-50 {
     width: 50%; }
+    @media only screen and (max-width: 56.25em) {
+      .row .col-50 {
+        padding-top: 30px;
+        width: 80%;
+        margin: auto; } }
   .row .right {
     float: right !important; }
 
@@ -85,11 +106,13 @@ body {
   display: inline-block;
   zoom: 1; }
 
-.owl-theme .owl-dots, .owl-theme .owl-nav {
+.owl-theme .owl-dots,
+.owl-theme .owl-nav {
   text-align: center;
   -webkit-tap-highlight-color: transparent; }
 
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
   background: #869791; }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -126,7 +149,12 @@ body {
 
 .navigation {
   float: right;
-  min-width: 1000px; }
+  margin-top: 30px; }
+  .navigation__nav {
+    float: right; }
+    @media only screen and (max-width: 75em) {
+      .navigation__nav {
+        display: none; } }
   .navigation__checkbox {
     float: right; }
   .navigation__item {
@@ -134,12 +162,15 @@ body {
     font-size: 1.6rem;
     font-family: "Brandon bold";
     margin: 0 15px; }
+    .navigation__item:last-child {
+      margin-left: 35px;
+      margin-right: 15px; }
   .navigation__link {
     text-transform: uppercase; }
     .navigation__link:link, .navigation__link:visited {
       color: #522c06;
       text-decoration: none;
-      font-size: 1.7rem; }
+      font-size: 1.6rem; }
   .navigation__link::after {
     content: "";
     transition: all 0.2s ease 0s;
@@ -162,12 +193,20 @@ body {
     cursor: pointer;
     position: absolute;
     right: 0;
-    top: 2rem; }
+    top: 2rem;
+    z-index: 9999;
+    transition: all .3s;
+    display: none; }
+    .navigation__button:hover {
+      background-color: #522c06; }
+    @media only screen and (max-width: 75em) {
+      .navigation__button {
+        display: block; } }
   .navigation__checkbox {
     display: none; }
   .navigation__icon {
     position: relative;
-    margin-top: 2.5rem; }
+    margin-top: 2.8rem; }
     .navigation__icon, .navigation__icon::before, .navigation__icon::after {
       width: 2rem;
       height: 2px;
@@ -185,6 +224,88 @@ body {
     .navigation__icon::after {
       top: .8rem; }
 
+.overlay {
+  position: fixed;
+  z-index: 1500;
+  background: #522c06;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow-y: hidden; }
+  .overlay.open {
+    opacity: .9;
+    visibility: visible;
+    height: 100%; }
+    .overlay.open li {
+      animation: fadeInRight .5s ease forwards;
+      animation-delay: .35s; }
+      .overlay.open li:nth-of-type(2) {
+        animation-delay: .4s; }
+      .overlay.open li:nth-of-type(3) {
+        animation-delay: .45s; }
+      .overlay.open li:nth-of-type(4) {
+        animation-delay: .50s; }
+  .overlay nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    font-family: 'Vollkorn', serif;
+    font-weight: 400;
+    text-align: center; }
+  .overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%; }
+    .overlay ul li {
+      display: block;
+      height: 10%;
+      height: calc(100% / 4);
+      min-height: 20px;
+      position: relative;
+      opacity: 0; }
+      .overlay ul li a {
+        font-family: "Brandon light";
+        display: block;
+        position: relative;
+        color: #FFF;
+        text-decoration: none;
+        overflow: hidden;
+        font-size: 4rem; }
+        .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+          width: 20%; }
+        .overlay ul li a:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0%;
+          transform: translateX(-50%);
+          height: 3px;
+          background: #6fcff5;
+          transition: .35s; }
+
+.active .navigation__icon {
+  background: transparent; }
+  .active .navigation__icon::before {
+    left: -3px;
+    width: 25px;
+    top: 0;
+    transform: rotate(135deg); }
+  .active .navigation__icon::after {
+    left: -3px;
+    width: 25px;
+    top: 0;
+    transform: rotate(-135deg); }
+
 .banner {
   position: relative;
   padding-top: 5rem; }
@@ -194,6 +315,12 @@ body {
     transform: rotate(-90deg);
     transform-origin: left top 0;
     position: absolute; }
+    @media only screen and (max-width: 75em) {
+      .banner__welcome {
+        margin-top: 25%; } }
+    @media only screen and (max-width: 56.25em) {
+      .banner__welcome {
+        display: none; } }
   .banner__image {
     position: relative;
     z-index: 200; }
@@ -206,6 +333,12 @@ body {
     right: 0;
     transform: translate(-25%, -50%);
     text-align: right; }
+    @media only screen and (max-width: 75em) {
+      .banner__call-to-action {
+        top: 40%; } }
+    @media only screen and (max-width: 56.25em) {
+      .banner__call-to-action {
+        top: 30%; } }
     .banner__call-to-action h2 {
       display: block;
       color: #FFF;
@@ -235,6 +368,13 @@ body {
     max-width: 500px;
     width: 100%;
     z-index: 300; }
+    @media only screen and (max-width: 75em) {
+      .banner__intro-text {
+        left: 12%; } }
+    @media only screen and (max-width: 56.25em) {
+      .banner__intro-text {
+        left: 5%;
+        bottom: 7px; } }
   .banner__text-box {
     background: #522c06;
     color: #FFF;
@@ -242,6 +382,13 @@ body {
     margin-top: 15px;
     position: relative;
     left: -200px; }
+    @media only screen and (max-width: 75em) {
+      .banner__text-box {
+        left: -122px; } }
+    @media only screen and (max-width: 56.25em) {
+      .banner__text-box {
+        left: -37px;
+        padding: 20px 40px; } }
   .banner__square {
     width: 420px;
     height: 420px;
@@ -250,6 +397,14 @@ body {
     bottom: -30px;
     left: 12%;
     z-index: 10; }
+    @media only screen and (max-width: 75em) {
+      .banner__square {
+        left: 5%;
+        width: 280px;
+        height: 280px; } }
+    @media only screen and (max-width: 56.25em) {
+      .banner__square {
+        display: none; } }
 
 .sponsors__logos {
   margin-top: -8px; }
@@ -263,17 +418,27 @@ body {
   .intro-content__paragraph {
     margin-left: 13%;
     color: #522c06; }
+    @media only screen and (max-width: 96.188em) {
+      .intro-content__paragraph {
+        padding-bottom: 15px; } }
+    @media only screen and (max-width: 56.25em) {
+      .intro-content__paragraph {
+        margin-left: 0; } }
 
 .twitter {
   padding-top: 60px;
   position: relative; }
-  .twitter__image img {
-    position: relative;
-    margin-left: 14%;
-    display: block;
-    max-width: 1260px;
-    width: 100%;
-    z-index: 10; }
+  .twitter__image {
+    margin-left: 14%; }
+    @media only screen and (max-width: 56.25em) {
+      .twitter__image {
+        margin-left: 0; } }
+    .twitter__image img {
+      position: relative;
+      display: block;
+      max-width: 1260px;
+      width: 100%;
+      z-index: 10; }
   .twitter__latest-news {
     color: #522c06;
     margin-top: 29%;
@@ -284,14 +449,39 @@ body {
     z-index: 1;
     border: 5px solid #522c06;
     padding: 10px 100px 185px 100px; }
+    @media only screen and (max-width: 87.5em) {
+      .twitter__latest-news {
+        margin-top: 40%; } }
+    @media only screen and (max-width: 75em) {
+      .twitter__latest-news {
+        margin-top: 55%;
+        padding: 10px 70px 185px 70px; } }
+    @media only screen and (max-width: 56.25em) {
+      .twitter__latest-news {
+        transform: rotate(0);
+        padding: 0;
+        right: 0;
+        border: none;
+        bottom: -9%;
+        text-align: center; } }
   .twitter__title {
     margin: auto;
     z-index: 20;
     position: absolute;
     top: 7%;
-    left: 68%;
-    transform: translate(-50%, -50%);
-    width: 905px; }
+    right: 3%;
+    transform: translate(0, -50%);
+    width: 50%; }
+    @media only screen and (max-width: 96.188em) {
+      .twitter__title {
+        top: -6%; } }
+    @media only screen and (max-width: 75em) {
+      .twitter__title {
+        width: 80%;
+        margin: auto;
+        right: 0;
+        text-align: center;
+        left: 0; } }
   .twitter__box {
     position: absolute;
     background-color: #c7a77c;
@@ -302,6 +492,12 @@ body {
     left: 10%;
     color: #FFF;
     padding: 45px 30px; }
+    @media only screen and (max-width: 75em) {
+      .twitter__box {
+        top: 17%; } }
+    @media only screen and (max-width: 56.25em) {
+      .twitter__box {
+        display: none; } }
     .twitter__box .twitter-logo {
       position: absolute;
       display: inline-block !important;
@@ -336,8 +532,12 @@ body {
 
 .twitter-feed {
   padding-top: 60px;
-  margin-left: 20%;
+  margin-left: 14%;
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .twitter-feed {
+      margin-left: 0;
+      padding-top: 80px; } }
   .twitter-feed__block {
     width: 100%;
     height: auto;
@@ -359,24 +559,51 @@ body {
     letter-spacing: 0; }
 
 .stallions {
-  padding-top: 40px; }
+  padding-top: 20px; }
+  @media only screen and (max-width: 56.25em) {
+    .stallions {
+      padding-top: 10px; } }
   .stallions h1 {
     margin-left: 10%; }
+    @media only screen and (max-width: 75em) {
+      .stallions h1 {
+        text-align: center;
+        margin: auto; } }
   .stallions__side-text {
-    margin-top: 22%;
+    margin-top: 26%;
     transform: rotate(-90deg);
     transform-origin: left top 0;
     position: absolute;
     left: 13%;
     color: #522c06; }
+    @media only screen and (max-width: 87.5em) {
+      .stallions__side-text {
+        margin-top: 30%; } }
+    @media only screen and (max-width: 75em) {
+      .stallions__side-text {
+        left: 2%;
+        margin-top: 33%; } }
+    @media only screen and (max-width: 56.25em) {
+      .stallions__side-text {
+        display: none; } }
   .stallions__box {
     padding-top: 60px;
     margin-left: 14%;
     display: flex; }
+    @media only screen and (max-width: 75em) {
+      .stallions__box {
+        margin-left: 5%; } }
+    @media only screen and (max-width: 56.25em) {
+      .stallions__box {
+        margin-left: 0;
+        padding-top: 20px; } }
   .stallions .card {
-    width: 30%;
     text-align: center;
-    transition: all .5s; }
+    transition: all .5s;
+    width: 30%; }
+    @media only screen and (max-width: 56.25em) {
+      .stallions .card {
+        width: 33.33333%; } }
     .stallions .card:not(:first-child) {
       margin-left: 25px; }
     .stallions .card--one {
@@ -415,6 +642,9 @@ body {
         font-size: 6rem;
         line-height: 1.1;
         margin-top: 30%; }
+        @media only screen and (max-width: 56.25em) {
+          .stallions .card:hover h2 {
+            font-size: 4rem; } }
         .stallions .card:hover h2:after {
           width: 40%;
           padding: 10px 0; }

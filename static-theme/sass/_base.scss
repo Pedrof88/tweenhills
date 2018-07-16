@@ -29,23 +29,19 @@ $font-bold: 'Brandon bold';
 $font-light: 'Brandon light';
 $font-medium: 'Brandon medium';
 $font-black: 'Brandon black';
-
 //FONT SIZE
 $default-font-size: 1.6rem;
-
 //COLOURS
 $color-primary: #522c06;
 $color-secondary: #c7a77c;
 $color-tertiary: #6fcff5;
 $color-white: #FFF;
 $color-grey: #f1f1f1;
-
 //GRID
 $grid-width: 100%;
 $gutter-vertical: 8rem;
 $gutter-vertical-small: 6rem;
 $gutter-horizontal: 5rem;
-
 //RESET
 *,
 *::after,
@@ -57,6 +53,10 @@ $gutter-horizontal: 5rem;
 
 html {
     font-size: 62.5%;
+
+    @include respond(tab-land) {
+        font-size: 55%;
+    }
 }
 
 body {
@@ -68,6 +68,10 @@ body {
     font-weight: 400;
     letter-spacing: 0.3rem;
     line-height: 1.7;
+
+    @include respond(tab-port) {
+        padding: 1rem;
+    }
 
     p {
         letter-spacing: 0;
@@ -103,3 +107,14 @@ body {
     letter-spacing: .8rem;
 }
 
+//ANIMATIONS
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}

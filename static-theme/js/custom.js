@@ -24,3 +24,9 @@ $(window).resize(function () {
     owlCarousel();
 });
 
+//MOBILE MENU
+
+$('#navi-toggle').click(function () {
+    $(this).toggleClass('active');
+    $('#overlay').toggleClass('open');
+});

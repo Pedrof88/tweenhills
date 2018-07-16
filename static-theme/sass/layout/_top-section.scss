@@ -2,11 +2,17 @@
     position: relative;
     padding-top: $gutter-horizontal;
     &__welcome {
-            color: $color-primary;
-            margin-top: 29%;
-            transform: rotate(-90deg);
-            transform-origin: left top 0;
-            position: absolute;
+        color: $color-primary;
+        margin-top: 29%;
+        transform: rotate(-90deg);
+        transform-origin: left top 0;
+        position: absolute;
+        @include respond(tab-land) {
+            margin-top: 25%;
+        }
+        @include respond(tab-port) {
+            display: none;
+        }
     }
     &__image {
         position: relative;
@@ -16,7 +22,6 @@
         }
         z-index: 200;
     }
-
     &__call-to-action {
         position: absolute;
         top: 50%;
@@ -24,6 +29,13 @@
         transform: translate(-25%, -50%);
         text-align: right;
 
+        @include respond(tab-land) {
+            top: 40%;
+        }
+
+        @include respond(tab-port) {
+            top: 30%;
+        }
         h2 {
             display: block;
             color: $color-white;
@@ -46,7 +58,6 @@
             color: $color-white;
             margin-right: 2rem;
         }
-
         &:hover,
         &:active {
             padding: .5rem;
@@ -54,7 +65,6 @@
             color: $color-white;
         }
     }
-
     &__intro-text {
         position: absolute;
         left: 19%;
@@ -62,8 +72,15 @@
         max-width: 500px;
         width: 100%;
         z-index: 300;
-    }
+        @include respond(tab-land) {
+            left: 12%;
+        }
 
+        @include respond(tab-port) {
+            left: 5%;
+            bottom: 7px;
+        }
+    }
     &__text-box {
         background: $color-primary;
         color: $color-white;
@@ -71,8 +88,16 @@
         margin-top: 15px;
         position: relative;
         left: -200px;
-    }
+        @include respond(tab-land) {
+            left: -122px;
+        }
 
+
+        @include respond(tab-port) {
+            left: -37px;
+            padding: 20px 40px;
+        }
+    }
     &__square {
         width: 420px;
         height: 420px;
@@ -81,8 +106,15 @@
         bottom: -30px;
         left: 12%;
         z-index: 10;
+        @include respond(tab-land) {
+            left: 5%;
+            width: 280px;
+            height: 280px;
+        }
+        @include respond(tab-port) {
+            display: none;
+        }
     }
-    
 }
 
 .sponsors {
@@ -100,6 +132,13 @@
     &__paragraph {
         margin-left: 13%;
         color: $color-primary;
+
+        @include respond(custom-big-desktop) {
+            padding-bottom: 15px
+        }
+
+        @include respond(tab-port) {
+            margin-left: 0;
+        }
     }
 }
-
