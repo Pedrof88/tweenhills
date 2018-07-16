@@ -14,6 +14,13 @@
 }
 
 @mixin respond($breakpoint) {
+    @if $breakpoint == extra-small {
+        @media only screen and (max-width: 24.375em) { @content };     //390px
+    }
+    @if $breakpoint == custom-small {
+        @media only screen and (max-width: 26.875em
+        ) { @content };     //430px;
+    }
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) { @content };     //600px
     }

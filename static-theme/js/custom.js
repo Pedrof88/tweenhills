@@ -2,14 +2,20 @@
 $(document).ready(function () {
     $('.carousel-one').owlCarousel({
         dots: true,
-        items: 3
+        items: 1,
+        responsive: {
+            // breakpoint from 600 up
+            600: {
+                items: 3,
+            }
+        }
     });
 });
 
 $(document).ready(function () {
     $('.carousel-two').owlCarousel({
         dots: true,
-        items: 1
+        items: 1,
     });
 });
 
@@ -25,8 +31,13 @@ $(window).resize(function () {
 });
 
 //MOBILE MENU
-
 $('#navi-toggle').click(function () {
     $(this).toggleClass('active');
     $('#overlay').toggleClass('open');
 });
+
+//PAGE LOADER
+$(window).on('load', function() { //
+    $('#status').fadeOut();
+    $('#preloader').delay(800).fadeOut('slow');
+  })

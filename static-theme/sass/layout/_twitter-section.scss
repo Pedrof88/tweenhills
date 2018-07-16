@@ -52,11 +52,12 @@
             top: -6%;
         }
         @include respond(tab-land) {
-            width: 80%;
-            margin: auto;
-            right: 0;
-            text-align: center;
-            left: 0;
+            width: 100%;
+            text-align: left;
+            left: 2%;
+        }
+        @include respond(phone) {
+            top: 15px;
         }
     }
     &__box {

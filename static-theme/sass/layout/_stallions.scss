@@ -1,14 +1,13 @@
 .stallions {
     padding-top: 20px;
-
     @include respond(tab-port) {
         padding-top: 10px;
     }
     h1 {
         margin-left: 10%;
         @include respond(tab-land) {
-            text-align: center;
-            margin: auto;
+            margin-left: 2%;
+            text-align: left;
         }
     }
     &__side-text {
@@ -40,6 +39,9 @@
             margin-left: 0;
             padding-top: 20px;
         }
+        @include respond(phone) {
+            flex-flow: row wrap;
+        }
     }
     .card {
         text-align: center;
@@ -48,8 +50,15 @@
         @include respond(tab-port) {
             width: 33.33333%;
         }
+        @include respond(phone) {
+            flex: 1 100%;
+        }
         &:not(:first-child) {
             margin-left: 25px;
+            @include respond(phone) {
+                margin-left: 0;
+                margin-top: 20px;
+            }
         }
         &--one {
             border: 4px solid $color-primary;
@@ -85,8 +94,15 @@
         &:hover {
             background-image: url(../../img/stallions-hover.png);
             border-color: $color-secondary;
+            background-size: cover;
+            @include respond(phone) {
+                background-image: none;
+            }
             img {
                 display: none;
+                @include respond(phone) {
+                    display: block;
+                }
             }
             h2 {
                 margin: auto;
@@ -98,13 +114,26 @@
                 @include respond(tab-port) {
                     font-size: 4rem;
                 }
+                @include respond(phone) {
+                    color: $color-primary;
+                    font-size: 2.4rem;
+                    margin-top: 7px;
+                    line-height: 1.7;
+                    padding: 0 20px 0 20px;
+                }
                 &:after {
                     width: 40%;
-                    padding: 10px 0;
+                    padding: 5px 0;
+                    @include respond(phone) {
+                        padding-top: 0;
+                    }
                 }
             }
             p {
                 margin-top: 10px;
+                @include respond(phone) {
+                    margin-top: 0;
+                }
             }
         }
     }
@@ -114,6 +143,9 @@
     position: relative;
     padding-top: 90px;
     padding-bottom: 90px;
+    @include respond(phone) {
+        padding-bottom: 0;
+    }
     &__banner {
         margin-left: -30px;
         img {
@@ -121,6 +153,9 @@
             z-index: 5;
             max-width: 1280px;
             width: 100%;
+        }
+        @include respond(phone) {
+            margin-left: 0;
         }
     }
     h1 {
@@ -130,6 +165,14 @@
         transform: translate(-50%, -50%);
         max-width: 250px;
         z-index: 200;
+        @include respond(tab-port) {
+            top: 35%;
+        }
+        @include respond(phone) {
+            top: 30px;
+            left: 10px;
+            transform: translate(0);
+        }
     }
     &__side-text {
         transform: rotate(-90deg);
@@ -138,6 +181,9 @@
         top: 31%;
         right: 2%;
         color: $color-primary;
+        @include respond(tab-land) {
+            display: none;
+        }
     }
     &__box {
         position: absolute;
@@ -149,6 +195,13 @@
         bottom: 5%;
         left: 10%;
         z-index: 10;
+        @include respond(phone) {
+            position: relative;
+            left: 0;
+            right: 0;
+            max-width: 100%;
+            margin-top: -7px;
+        }
         p {
             color: $color-white;
         }
@@ -158,6 +211,9 @@
         height: 250px;
         width: 250px;
         z-index: 1;
+        @include respond(phone) {
+            display: none;
+        }
     }
     .dark {
         border: 4px solid $color-primary;
