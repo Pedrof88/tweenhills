@@ -1,0 +1,209 @@
+.navigation {
+    float: right;
+    margin-top: 30px;
+    &__nav {
+        float: right;
+
+        @include respond(tab-land) {
+            display: none;
+        }
+    }
+    &__checkbox {
+        float: right;
+    }
+    li {
+        display: inline-block;
+        font-size: $default-font-size;
+        font-family: $font-bold;
+        margin: 0 15px;
+
+        &:last-child {
+            margin-left: 35px;
+            margin-right: 15px;
+        }
+    }
+    a {
+        text-transform: uppercase;
+        &:link,
+        &:visited {
+            color: $color-primary;
+            text-decoration: none;
+            font-size: 1.6rem;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    a::after {
+        content: "";
+        transition: all 0.2s ease 0s;
+        left: 0;
+        top: 0;
+        width: 0px;
+    }
+    a:hover::after {
+        content: "";
+        display: block;
+        float: right;
+        opacity: 1;
+        width: 50%;
+        padding-top: 2px;
+        border-bottom: 2px solid $color-tertiary;
+    }
+    &__button {
+        width: 50px;
+        height: 50px;
+        background-color: $color-secondary;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 2rem;
+        z-index: 9900;
+        transition: all .3s;
+        display: none;
+        &:hover {
+            background-color: $color-primary;
+        }
+        @include respond(tab-land) {
+            display: block;
+        }
+    }
+    &__checkbox {
+        display: none;
+    }
+    &__icon {
+        position: relative;
+        margin-top: 2.8rem;
+        &,
+        &::before,
+        &::after {
+            width: 2rem;
+            height: 2px;
+            background-color: $color-white;
+            display: inline-block;
+        }
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 2px;
+            width: 1.5rem;
+            float: none;
+            transition: all .2s;
+        }
+        &::before {
+            top: -.8rem;
+        }
+        ;
+        &::after {
+            top: .8rem;
+        }
+    }
+}
+
+//MOBILE MENU
+.overlay {
+    position: fixed;
+    z-index: 1500;
+    background: $color-primary;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow-y: hidden;
+    &.open {
+        opacity: .9;
+        visibility: visible;
+        height: 100%;
+        li {
+            animation: fadeInRight .5s ease forwards;
+            animation-delay: .35s;
+            &:nth-of-type(2) {
+                animation-delay: .4s;
+            }
+            &:nth-of-type(3) {
+                animation-delay: .45s;
+            }
+            &:nth-of-type(4) {
+                animation-delay: .50s;
+            }
+        }
+    }
+    nav {
+        position: relative;
+        height: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 50px;
+        font-family: 'Vollkorn', serif;
+        font-weight: 400;
+        text-align: center;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        li {
+            display: block;
+            height: 10%;
+            height: calc(100% / 4);
+            min-height: 20px;
+            position: relative;
+            opacity: 0;
+            a {
+                font-family: $font-light;
+                display: block;
+                position: relative;
+                color: $color-white;
+                text-decoration: none;
+                overflow: hidden;
+                font-size: 4rem;
+                &:hover:after,
+                &:focus:after,
+                &:active:after {
+                    width: 20%;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 0%;
+                    transform: translateX(-50%);
+                    height: 3px;
+                    background: $color-tertiary;
+                    transition: .35s;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+.active {
+    .navigation__icon {
+        background: transparent;
+        &::before {
+            left: -3px;
+            width: 25px;
+            top: 0;
+            transform: rotate(135deg);
+        }
+        ;
+        &::after {
+            left: -3px;
+            width: 25px;
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+}

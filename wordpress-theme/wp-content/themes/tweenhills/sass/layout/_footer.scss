@@ -1,0 +1,73 @@
+.footer {
+    height: auto;
+    background: #f1f1f1;
+    position: absolute;
+    width: 100%;
+    margin-left: -25px;
+    z-index: 1000;
+    padding: 50px 100px;
+    @include respond(tab-land) {
+        padding: 50px 30px;
+        margin-left: -9px;
+    }
+    &__left {
+        float: left;
+        @include respond(tab-land) {
+            width: 100%;
+            float: none;
+            margin: auto;
+        }
+    }
+    &__right {
+        margin-top: 25px;
+        float: right;
+        @include respond(tab-land) {
+            float: left;
+        }
+        img:not(:first-child) {
+            margin-left: 15px;
+        }
+        @include respond(phone) {
+            width: 100%;
+            float: none;
+            margin: 15px auto;
+            display: block;
+        }
+    }
+    &__list {
+        padding: 20px 0;
+        list-style: none;
+    }
+    li {
+        display: inline;
+        a {
+            transition: all .2s;
+            text-decoration: none;
+            color: $color-primary;
+            text-transform: uppercase;
+            font-family: $font-bold;
+            font-size: 1.2rem;
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+    &__copyright {
+        p {
+            color: $color-secondary;
+            font-family: $font-light;
+            font-size: 1.2rem;
+        }
+    }
+    &__logo {
+        object {
+            @include respond(phone) {
+                margin: 15px auto;
+                display: block;
+            }
+        }
+    }
+}

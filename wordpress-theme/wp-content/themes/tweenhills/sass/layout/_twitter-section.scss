@@ -1,0 +1,159 @@
+.twitter {
+    padding-top: 60px;
+    position: relative;
+    &__image {
+        margin-left: 14%;
+        @include respond(tab-port) {
+            margin-left: 0;
+        }
+        img {
+            position: relative;
+            display: block;
+            max-width: 1260px;
+            width: 100%;
+            z-index: 10;
+        }
+    }
+    &__latest-news {
+        color: $color-primary;
+        margin-top: 29%;
+        transform: rotate(-90deg);
+        transform-origin: left top 0;
+        position: absolute;
+        left: 3%;
+        z-index: 1;
+        border: 5px solid $color-primary;
+        padding: 10px 100px 185px 100px;
+        @include respond(custom-desktop) {
+            margin-top: 40%;
+        }
+        @include respond(tab-land) {
+            margin-top: 55%;
+            padding: 10px 70px 185px 70px;
+        }
+        @include respond(tab-port) {
+            transform: rotate(0);
+            padding: 0;
+            right: 0;
+            border: none;
+            bottom: -9%;
+            text-align: center;
+        }
+    }
+    &__title {
+        margin: auto;
+        z-index: 20;
+        position: absolute;
+        top: 7%;
+        right: 3%;
+        transform: translate(0, -50%);
+        width: 50%;
+        @include respond(custom-big-desktop) {
+            top: -6%;
+        }
+        @include respond(tab-land) {
+            width: 100%;
+            text-align: left;
+            left: 2%;
+        }
+        @include respond(phone) {
+            top: 15px;
+        }
+    }
+    &__box {
+        position: absolute;
+        background-color: $color-secondary;
+        width: 400px;
+        height: auto;
+        z-index: 100;
+        top: -50px;
+        left: 10%;
+        color: $color-white;
+        padding: 45px 30px;
+        @include respond(tab-land) {
+            top: 17%;
+        }
+        @include respond(tab-port) {
+            display: none;
+        }
+        .twitter-logo {
+            position: absolute;
+            display: inline-block !important;
+            top: 4px;
+            width: 20px !important;
+            height: 18px;
+        }
+        .name {
+            margin-left: 30px;
+        }
+        .follow-us {
+            &:link,
+            &:visited {
+                text-decoration: none;
+                color: $color-white;
+                float: right;
+            }
+        }
+        a {
+            &:link,
+            &:visited {
+                text-decoration: none;
+                color: $color-primary;
+                float: right;
+            }
+        }
+        p {
+            margin-top: 20px;
+            a {
+                float: none !important;
+            }
+        }
+    }
+    &__logo-box {
+        position: absolute;
+        background-color: $color-tertiary;
+        height: 360px;
+        width: 80px;
+        bottom: 5%;
+        right: 459px;
+        img {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+    }
+}
+
+.twitter-feed {
+    padding-top: 60px;
+    margin-left: 14%;
+    display: flex;
+    @include respond(tab-port) {
+        margin-left: 0;
+        padding-top: 80px;
+    }
+    &__block {
+        width: 100%;
+        height: auto;
+        border-left: 3px solid $color-secondary;
+        padding: 0 30px;
+        &:not(:first-child) {
+            padding: 0 30px;
+        }
+    }
+    .date {
+        font-size: 1.4rem;
+        color: $color-secondary;
+        letter-spacing: 0;
+    }
+    .title {
+        color: $color-primary;
+        font-size: 1.8rem;
+        font-family: $font-bold;
+        letter-spacing: 0;
+    }
+    .content {
+        color: $color-primary;
+        letter-spacing: 0;
+    }
+}
